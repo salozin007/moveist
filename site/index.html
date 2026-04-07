@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ASDP Móveis Planejados</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- PRELOADER -->
+  <div id="preloader">
+    <div class="preloader-logo">ASDP</div>
+    <div class="spinner"></div>
+  </div>
+
+  <!-- BARRA DE PROGRESSO -->
+  <div id="progress-bar"></div>
+
+  <!-- HEADER -->
+  <header id="header">
+    <h1 class="logo">ASDP <span>Móveis</span></h1>
+
+    <nav id="menu">
+      <a href="#home">Início</a>
+      <a href="#ambientes">Ambientes</a>
+      <a href="#stats">Números</a>
+      <a href="#diferenciais">Diferenciais</a>
+      <a href="#depoimentos">Depoimentos</a>
+      <a href="#contato">Contato</a>
+    </nav>
+
+    <div class="header-actions">
+      <button id="dark-toggle" aria-label="Alternar tema">
+        <i class="fas fa-moon"></i>
+      </button>
+      <div class="menu-mobile" id="menu-mobile-btn" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO / BANNER -->
+  <section class="banner" id="home">
+    <div class="banner-overlay"></div>
+    <div class="banner-text">
+      <p class="banner-tag">Móveis Planejados de Alto Padrão</p>
+      <h2>Transformamos seu <span id="typewriter"></span></h2>
+      <p class="banner-sub">Design moderno, qualidade premium e sofisticação em cada detalhe.</p>
+      <div class="banner-btns">
+        <button class="btn-primary" onclick="scrollContato()">
+          <i class="fas fa-pencil-ruler"></i> Solicitar Projeto
+        </button>
+        <a href="#ambientes" class="btn-outline">
+          <i class="fas fa-images"></i> Ver Ambientes
+        </a>
+      </div>
+    </div>
+    <div class="banner-scroll">
+      <i class="fas fa-chevron-down"></i>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="stats revelar" id="stats">
+    <div class="stats-grid">
+      <div class="stat-item">
+        <i class="fas fa-home"></i>
+        <span class="counter" data-target="1200">0</span>
+        <p>Projetos Entregues</p>
+      </div>
+      <div class="stat-item">
+        <i class="fas fa-smile"></i>
+        <span class="counter" data-target="980">0</span>
+        <p>Clientes Satisfeitos</p>
+      </div>
+      <div class="stat-item">
+        <i class="fas fa-award"></i>
+        <span class="counter" data-target="15">0</span>
+        <p>Anos de Experiência</p>
+      </div>
+      <div class="stat-item">
+        <i class="fas fa-city"></i>
+        <span class="counter" data-target="30">0</span>
+        <p>Cidades Atendidas</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- AMBIENTES -->
+  <section class="ambientes revelar" id="ambientes">
+    <div class="section-header">
+      <span class="section-tag">Nossos Projetos</span>
+      <h2>Ambientes</h2>
+      <p>Soluções planejadas para cada espaço da sua vida</p>
+    </div>
+
+    <div class="cards">
+
+      <!-- data-ambiente é OBRIGATÓRIO para o modal funcionar -->
+      <div class="card" data-tilt data-ambiente="cozinha">
+        <div class="card-img-wrap">
+          <img src="imagem/coz5.jpeg" alt="Cozinha planejada" loading="lazy" />
+          <div class="card-overlay"><i class="fas fa-search-plus"></i></div>
+        </div>
+        <div class="card-body">
+          <h3>Cozinhas</h3>
+          <p>Praticidade e estilo para o coração da sua casa.</p>
+          <span class="card-ver">Ver móveis <i class="fas fa-arrow-right"></i></span>
+        </div>
+      </div>
+
+      <div class="card" data-tilt data-ambiente="sala">
+        <div class="card-img-wrap">
+          <img src="imagem/sala1.jpeg" alt="Sala planejada" loading="lazy" />
+          <div class="card-overlay"><i class="fas fa-search-plus"></i></div>
+        </div>
+        <div class="card-body">
+          <h3>Salas</h3>
+          <p>Elegância e conforto para receber com estilo.</p>
+          <span class="card-ver">Ver móveis <i class="fas fa-arrow-right"></i></span>
+        </div>
+      </div>
+
+      <div class="card" data-tilt data-ambiente="quarto">
+        <div class="card-img-wrap">
+          <img src="imagem/qua1.jpeg" alt="Quarto planejado" loading="lazy" />
+          <div class="card-overlay"><i class="fas fa-search-plus"></i></div>
+        </div>
+        <div class="card-body">
+          <h3>Quartos</h3>
+          <p>Descanso e organização em perfeita harmonia.</p>
+          <span class="card-ver">Ver móveis <i class="fas fa-arrow-right"></i></span>
+        </div>
+      </div>
+
+      <div class="card" data-tilt data-ambiente="homeoffice">
+        <div class="card-img-wrap">
+          <img src="imagem/hom1.jpeg" alt="Home Office planejado" loading="lazy" />
+          <div class="card-overlay"><i class="fas fa-search-plus"></i></div>
+        </div>
+        <div class="card-body">
+          <h3>Home Office</h3>
+          <p>Produtividade e design no seu espaço de trabalho.</p>
+          <span class="card-ver">Ver móveis <i class="fas fa-arrow-right"></i></span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- DIFERENCIAIS -->
+  <section class="diferenciais revelar" id="diferenciais">
+    <div class="section-header light">
+      <span class="section-tag">Por que nos escolher?</span>
+      <h2>Nossos Diferenciais</h2>
+      <p>O que nos torna a melhor escolha para o seu projeto</p>
+    </div>
+
+    <div class="grid">
+      <div class="diferencial-item revelar-item">
+        <div class="diferencial-icon"><i class="fas fa-gem"></i></div>
+        <h3>Alta Qualidade</h3>
+        <p>Materiais premium selecionados com rigor e acabamento impecável em cada detalhe.</p>
+      </div>
+      <div class="diferencial-item revelar-item">
+        <div class="diferencial-icon"><i class="fas fa-drafting-compass"></i></div>
+        <h3>Projeto Personalizado</h3>
+        <p>Cada cliente recebe um projeto exclusivo, pensado para o seu espaço e estilo de vida.</p>
+      </div>
+      <div class="diferencial-item revelar-item">
+        <div class="diferencial-icon"><i class="fas fa-paint-brush"></i></div>
+        <h3>Design Moderno</h3>
+        <p>Ambientes elegantes, funcionais e alinhados às últimas tendências do design de interiores.</p>
+      </div>
+      <div class="diferencial-item revelar-item">
+        <div class="diferencial-icon"><i class="fas fa-truck"></i></div>
+        <h3>Entrega Pontual</h3>
+        <p>Cumprimos prazos com responsabilidade para você aproveitar seu espaço o quanto antes.</p>
+      </div>
+      <div class="diferencial-item revelar-item">
+        <div class="diferencial-icon"><i class="fas fa-shield-alt"></i></div>
+        <h3>Garantia Estendida</h3>
+        <p>Todos os nossos projetos contam com garantia e suporte pós-entrega.</p>
+      </div>
+      <div class="diferencial-item revelar-item">
+        <div class="diferencial-icon"><i class="fas fa-headset"></i></div>
+        <h3>Suporte Dedicado</h3>
+        <p>Nossa equipe está disponível para acompanhar você em cada etapa do projeto.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALERIA -->
+  <section class="galeria revelar" id="galeria">
+    <div class="section-header">
+      <span class="section-tag">Portfólio</span>
+      <h2>Projetos Recentes</h2>
+      <p>Confira alguns dos nossos trabalhos realizados</p>
+    </div>
+
+    <div class="galeria-grid">
+      <div class="galeria-item">
+        <img src="https://images.unsplash.com/photo-1556911220-bda9f7f7597e?w=800" alt="Cozinha" loading="lazy" />
+        <div class="galeria-overlay"><i class="fas fa-expand"></i></div>
+      </div>
+      <div class="galeria-item">
+        <img src="https://images.unsplash.com/photo-1560185127-6ed189bf02f4?w=800" alt="Sala" loading="lazy" />
+        <div class="galeria-overlay"><i class="fas fa-expand"></i></div>
+      </div>
+      <div class="galeria-item">
+        <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?w=800" alt="Quarto" loading="lazy" />
+        <div class="galeria-overlay"><i class="fas fa-expand"></i></div>
+      </div>
+      <div class="galeria-item">
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800" alt="Home Office" loading="lazy" />
+        <div class="galeria-overlay"><i class="fas fa-expand"></i></div>
+      </div>
+      <div class="galeria-item">
+        <img src="https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?w=800" alt="Sala de estar" loading="lazy" />
+        <div class="galeria-overlay"><i class="fas fa-expand"></i></div>
+      </div>
+      <div class="galeria-item">
+        <img src="https://images.unsplash.com/photo-1484101403633-562f891dc89a?w=800" alt="Banheiro" loading="lazy" />
+        <div class="galeria-overlay"><i class="fas fa-expand"></i></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEPOIMENTOS -->
+  <section class="depoimentos revelar" id="depoimentos">
+    <div class="section-header light">
+      <span class="section-tag">Clientes Felizes</span>
+      <h2>Depoimentos</h2>
+      <p>O que dizem nossos clientes sobre a ASDP Móveis</p>
+    </div>
+
+    <div class="slider-wrap">
+      <div class="slider" id="slider">
+        <div class="slide">
+          <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+          <p>"A ASDP transformou minha cozinha num ambiente incrível. Qualidade excepcional e prazo cumprido à risca!"</p>
+          <div class="slide-author">
+            <div class="slide-avatar">AM</div>
+            <div>
+              <strong>Ana Maria</strong>
+              <span>São Paulo, SP</span>
+            </div>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+          <p>"Meu home office ficou exatamente como eu imaginava. Equipe atenciosa e muito profissional do início ao fim."</p>
+          <div class="slide-author">
+            <div class="slide-avatar">RC</div>
+            <div>
+              <strong>Ricardo Costa</strong>
+              <span>Campinas, SP</span>
+            </div>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+          <p>"Simplesmente perfeito! O quarto do meu filho ficou lindo e funcional. Recomendo a todos sem hesitar!"</p>
+          <div class="slide-author">
+            <div class="slide-avatar">JS</div>
+            <div>
+              <strong>Juliana Santos</strong>
+              <span>Ribeirão Preto, SP</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="slider-controls">
+        <button id="prev-slide" aria-label="Anterior"><i class="fas fa-chevron-left"></i></button>
+        <div class="slider-dots" id="slider-dots"></div>
+        <button id="next-slide" aria-label="Próximo"><i class="fas fa-chevron-right"></i></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section class="contato revelar" id="contato">
+    <div class="section-header">
+      <span class="section-tag">Fale Conosco</span>
+      <h2>Solicite um Projeto</h2>
+      <p>Preencha o formulário e entraremos em contato em até 24 horas</p>
+    </div>
+
+    <div class="contato-wrap">
+      <div class="contato-info">
+        <div class="info-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <div>
+            <strong>Endereço</strong>
+            <span>Rua das Madeiras, 245 — São Paulo, SP</span>
+          </div>
+        </div>
+        <div class="info-item">
+          <i class="fas fa-phone"></i>
+          <div>
+            <strong>Telefone</strong>
+            <span>(11) 99999-0000</span>
+          </div>
+        </div>
+        <div class="info-item">
+          <i class="fas fa-envelope"></i>
+          <div>
+            <strong>E-mail</strong>
+            <span>contato@asdpmoveis.com.br</span>
+          </div>
+        </div>
+        <div class="info-item">
+          <i class="fas fa-clock"></i>
+          <div>
+            <strong>Horário</strong>
+            <span>Seg–Sex: 8h às 18h | Sáb: 8h às 13h</span>
+          </div>
+        </div>
+      </div>
+
+      <form id="form" novalidate>
+        <div class="form-group">
+          <input type="text" id="nome" placeholder=" " required />
+          <label for="nome">Seu nome</label>
+          <span class="form-error">Por favor, informe seu nome.</span>
+        </div>
+        <div class="form-group">
+          <input type="email" id="email" placeholder=" " required />
+          <label for="email">Seu e-mail</label>
+          <span class="form-error">Informe um e-mail válido.</span>
+        </div>
+        <div class="form-group">
+          <input type="tel" id="telefone" placeholder=" " />
+          <label for="telefone">Telefone (opcional)</label>
+        </div>
+        <div class="form-group">
+          <select id="ambiente">
+            <option value="">Selecione o ambiente</option>
+            <option>Cozinha</option>
+            <option>Sala</option>
+            <option>Quarto</option>
+            <option>Home Office</option>
+            <option>Banheiro</option>
+            <option>Área de Serviço</option>
+            <option>Outro</option>
+          </select>
+          <label for="ambiente" class="label-select">Ambiente desejado</label>
+        </div>
+        <div class="form-group">
+          <textarea id="mensagem" placeholder=" " rows="4"></textarea>
+          <label for="mensagem">Descreva seu projeto</label>
+        </div>
+        <button type="submit" class="btn-primary btn-submit">
+          <span class="btn-text"><i class="fas fa-paper-plane"></i> Enviar Mensagem</span>
+          <span class="btn-loading"><i class="fas fa-circle-notch fa-spin"></i></span>
+        </button>
+        <p id="mensagem-feedback"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-brand">
+        <h3>ASDP <span>Móveis</span></h3>
+        <p>Transformando ambientes com design e qualidade desde 2010.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+          <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+          <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h4>Navegação</h4>
+        <a href="#home">Início</a>
+        <a href="#ambientes">Ambientes</a>
+        <a href="#diferenciais">Diferenciais</a>
+        <a href="#depoimentos">Depoimentos</a>
+        <a href="#contato">Contato</a>
+      </div>
+      <div class="footer-links">
+        <h4>Ambientes</h4>
+        <a href="#ambientes">Cozinhas</a>
+        <a href="#ambientes">Salas</a>
+        <a href="#ambientes">Quartos</a>
+        <a href="#ambientes">Home Office</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 ASDP Móveis Planejados — Todos os direitos reservados</p>
+    </div>
+  </footer>
+
+  <!-- MODAL DE MÓVEIS POR AMBIENTE -->
+  <div id="modal-moveis" class="modal-moveis" role="dialog" aria-modal="true" aria-labelledby="modal-titulo">
+    <div class="modal-moveis-inner">
+      <div class="modal-moveis-header">
+        <div>
+          <span class="modal-tag" id="modal-tag">Ambientes</span>
+          <h2 id="modal-titulo">Móveis</h2>
+        </div>
+        <button class="modal-close" id="modal-close" aria-label="Fechar"><i class="fas fa-times"></i></button>
+      </div>
+      <div class="modal-moveis-body" id="modal-body">
+        <!-- Cards gerados via JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightbox-close"><i class="fas fa-times"></i></button>
+    <button class="lightbox-nav" id="lightbox-prev"><i class="fas fa-chevron-left"></i></button>
+    <div class="lightbox-img-wrap">
+      <img id="img-grande" alt="Projeto ampliado" />
+    </div>
+    <button class="lightbox-nav" id="lightbox-next"><i class="fas fa-chevron-right"></i></button>
+    <div class="lightbox-counter" id="lightbox-counter"></div>
+  </div>
+
+  <!-- BOTÃO WHATSAPP -->
+  <a href="https://wa.me/5511999990000?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento."
+     target="_blank" id="whatsapp-btn" aria-label="WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+    <span class="whatsapp-tooltip">Fale conosco!</span>
+  </a>
+
+  <!-- BOTÃO VOLTAR AO TOPO -->
+  <button id="btn-topo" aria-label="Voltar ao topo">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
